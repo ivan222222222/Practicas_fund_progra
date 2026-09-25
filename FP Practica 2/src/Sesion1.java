@@ -18,8 +18,8 @@ public class Sesion1 {
             System.out.println("Opcion incorrecta");
         }
         System.out.print("Intoduzca un numero entre el 0 y el 100: ");
-        double numero = teclado.nextDouble();
-        if (numero >= 0.0 && numero <= 100.0){
+        int numero = teclado.nextInt();
+        if (numero >= 0 && numero <= 100){
             System.out.println("Ha elegido el numero: "+ numero);
         }
         else {
