@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// Realizado por Ivan Novillo Triguero bx0153 IWSIM13
+//Realizado por Ivan Novillo Triguero bx0153 IWSIM13
 public class Sesion3 {
 
     public static int leerNumero(int minimo,int maximo){
@@ -73,9 +73,17 @@ public class Sesion3 {
     }
 
 
-    public static void tablaDeMultiplicar(int numero){
+    /*public static void tablaDeMultiplicar(int numero){
         for (int i=1;i<=10;i++){
             int resultado = numero*i;
+            System.out.printf(numero+" * %2d = %3d \n",i, resultado);
+        }
+    }
+
+*/
+    public static void tablaDeMultiplicar(int numero){
+        for (int i=1;i<=10;i++){
+            int resultado = Sesion4.multiplicarRecursivo(numero,i);
             System.out.printf(numero+" * %2d = %3d \n",i, resultado);
         }
     }
@@ -86,16 +94,21 @@ public class Sesion3 {
             i = menu();
             switch (i){
                 case 1:
-                    dibujarTriangulo(leerNumero(5,30),leerCaracter());
+                   //dibujarTriangulo(leerNumero(5,30),leerCaracter());
+                    Sesion4.dibujarTrianguloRecursivo(leerNumero(5,30),leerCaracter());
                     break;
 
                 case 2:
                     dibujarCuadrado(leerNumero(10,35),leerCaracter());
                     break;
                 case 3:
-                    int num1 = leerNumero(0,20);
+                    /*int num1 = leerNumero(0,20);
                     int num2 = leerNumero(0,20);
                     System.out.println(num1+" * "+num2+" = "+multiplicarIterativo(num1,num2));
+                     */
+                    int num1 = leerNumero(0,20);
+                    int num2 = leerNumero(0,20);
+                    System.out.println(num1+" * "+num2+" = "+Sesion4.multiplicarRecursivo(num1,num2));
                     break;
                 case 4:
                     tablaDeMultiplicar(leerNumero(1,10));
