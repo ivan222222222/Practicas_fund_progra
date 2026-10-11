@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Realizado por Ivan Novillo Triguero bx0153 IWSIM13
 public class Sesion2 {
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);

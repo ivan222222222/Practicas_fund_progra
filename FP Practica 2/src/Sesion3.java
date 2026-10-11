@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Realizado por Ivan Novillo Triguero bx0153 IWSIM13
 public class Sesion3 {
 
     public static int leerNumero(int minimo,int maximo){
