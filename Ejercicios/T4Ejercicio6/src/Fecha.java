@@ -2,9 +2,16 @@ public class Fecha {
     private int dia,mes,anio;
 
     public Fecha(int dia, int mes, int anio) {
-        this.dia = dia;
-        this.mes = mes;
-        this.anio = anio;
+        if (combrobarFecha(dia, mes, anio)){
+            this.dia = dia;
+            this.mes = mes;
+            this.anio = anio;
+        }else {
+            this.dia = 1;
+            this.mes = 1;
+            this.anio = 1900;
+        }
+
     }
 
     public static boolean bisiesto(int anio){
