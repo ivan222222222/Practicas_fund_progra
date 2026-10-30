@@ -11,25 +11,31 @@ public class GestionImagen {
             opcion = menu();
             switch (opcion) {
                 case 1:
-                    // Cargar imagen de prueba
+                    imagen = cargarImagenDePrueba();
                     break;
                 case 2:
-                    // Mostrar imagen
+                    if (imagen!=null)
+                        VisorImagen.mostrar(imagen);
                     break;
                 case 3:
-                    // Aplicar espejo horizontal
+                    if (imagen!=null)
+                        imagen.espejoHorizontal();
                     break;
                 case 4:
-                    // Aplicar espejo vertical
+                    if (imagen!=null)
+                        imagen.espejoVertical();
                     break;
                 case 5:
-                    // Rotar 180º
+                    if (imagen!=null)
+                        imagen.rotar180();
                     break;
                 case 6:
-                    // Invertir colores
+                    if (imagen!=null)
+                        imagen.invertirColores();
                     break;
                 case 7:
-                    // Convertir a grises
+                    if (imagen!=null)
+                        imagen.convertirAGrises();
                     break;
                 case 8:
                     // Guardar la imagen .txt
@@ -42,8 +48,10 @@ public class GestionImagen {
     }
 
     public static int menu() {
-
+        return Teclado.leerEntero(0,9,"Introduce una opcion: ");
     }
+
+
 
     public static Imagen cargarImagenDePrueba() {
         return new Imagen(cargarPixeles(), cargarPaleta());
@@ -85,7 +93,9 @@ public class GestionImagen {
 
     }
 
-    public static Imagen cargarImagen(String fichero) {
+   /* public static Imagen cargarImagen(String fichero) {
 
     }
+    */
+
 }
